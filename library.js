@@ -16,6 +16,8 @@ function Book(title, author, numPages, isRead) {
 
 }
 
-function addBookToLibrary() {
-
+function addBookToLibrary(title, author, numPages, isRead) {
+    let newBook = new Book(title, author, numPages, isRead)
+    myLibrary.push(newBook);
 }
+
