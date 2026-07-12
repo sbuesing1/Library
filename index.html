@@ -4,13 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="library.js"></script>
+    <script src="library.js" defer></script>
 </head>
 <body>
-    
-    <div class="book-container">
-
-    </div>
 
     <form>
         <label for="book_title">*Book Title:</label>
@@ -23,7 +19,9 @@
         <input type="number" id="num_pages" name="num_pages" required>
 
         <label for="is_read">*Have you read it?:</label>
-        <input type="text" id="is_read" name="is_read" required>
+        <input type="text" id="is_read" name="is_read" required> 
+
+        <button id="submit">Submit</button>
         
     </form>
 

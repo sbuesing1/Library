@@ -16,8 +16,28 @@ function Book(title, author, numPages, isRead) {
 
 }
 
-function addBookToLibrary(title, author, numPages, isRead) {
-    let newBook = new Book(title, author, numPages, isRead)
+function addBookToLibrary() {
+    let newBook = createBook();
     myLibrary.push(newBook);
 }
+
+
+function createBook() {
+    const name = document.querySelector("#book_title");
+    const author = document.querySelector("#author");
+    const numPages = document.querySelector("#num_pages");
+    const isRead = document.querySelector("#is_read");
+    const submitButton = document.querySelector("#submit");
+    const con = document.querySelector("#hi");
+    submitButton.addEventListener('click', (event) => {
+        console.log(name.value);
+        event.preventDefault();
+        
+    })
+    let newBook = new Book(name, author, numPages, isRead)
+    console.log(newBook.getId());
+    return newBook;
+}
+
+
 
